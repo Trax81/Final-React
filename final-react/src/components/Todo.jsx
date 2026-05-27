@@ -3,10 +3,11 @@ import './Todo.css'
 
 
 
-function Todo() {
+function Todo(title) {
+    console.log(title)
     return (
     <div className="todo">
-    <h2>Finish Frontend Simlified</h2>
+    <h2>{ title }</h2>
     <button>Delete</button>
    </div>
     )
