@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -7,6 +7,7 @@ import Todo from './components/Todo.jsx'
 import Title from './components/Title.jsx'
 import Modal from './components/Modal.jsx'
 import React, { useState } from 'react'
+import Counter from './components/Counter.jsx'
 
 
 
@@ -14,6 +15,9 @@ import React, { useState } from 'react'
 
 
 function App() {
+
+
+  return <Couter />
   const [showModal, setShowModal] = useState(false)
   return (
    <div>
