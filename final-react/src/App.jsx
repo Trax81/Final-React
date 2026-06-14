@@ -17,7 +17,7 @@ import Counter from './components/Counter.jsx'
 function App() {
 
 
-  return <Couter />
+  return <Counter />
   const [showModal, setShowModal] = useState(false)
   return (
    <div>
