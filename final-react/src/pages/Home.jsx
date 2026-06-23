@@ -1,35 +1,30 @@
 import { useEffect, useState } from "react";
 
 function Home() {
-  const [items, setItems] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     fetch("https://www.omdbapi.com/?s=${searchValue}&apikey=11a85b25")
       .then((res) => res.json())
       .then((data) => {
-        setItems(data.slice(0, 6));
-      });
+        setMovies(data.Search ? data.Search.slice(0, 6) : []);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
     <div>
-      <h1>API Items</h1>
-    console.log(movies);
-      {items.map((item) => (
-        <div key={item.id}>
-          <h2>{item.title}</h2>
-          <p>{item.body}</p>
+      <h1>Movies</h1>
+
+      {movies.map((movie) => (
+        <div key={movie.imdbID}>
+          <img src={movie.Poster} alt={movie.Title} />
+          <h2>{movie.Title}</h2>
+          <p>{movie.Year}</p>
         </div>
       ))}
     </div>
   );
 }
-
-{movies && movies.slice(0, 6).map((movie) => (
-  <div key={movie.id}>
-    <h2>{movie.title}</h2>
-    <p>{movie.overview}</p>
-  </div>
-))}
 
 export default Home;
