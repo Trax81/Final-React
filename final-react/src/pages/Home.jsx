@@ -18,7 +18,7 @@ function Home() {
 
       {movies.map((movie) => (
         <div key={movie.imdbID}>
-          <img src={movie.Poster} alt={movie.Title} />
+          <img className="movie__poster" src={movie.Poster} alt={movie.Title} />
           <h2>{movie.Title}</h2>
           <p>{movie.Year}</p>
         </div>
@@ -28,3 +28,4 @@ function Home() {
 }
 
 export default Home;
+

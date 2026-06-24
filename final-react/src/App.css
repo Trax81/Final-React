@@ -10,8 +10,9 @@
 
 
 h1 {
-  color:blue;
+  color:lightblue;
   text-align: center;
+  padding:40px;
 }
 
 
@@ -19,6 +20,7 @@ h1 {
   background-color: black;
 }
 
-.Poster {
-  text-align: center;
+
+.movie__poster {
+  margin-left:150px;
 }
