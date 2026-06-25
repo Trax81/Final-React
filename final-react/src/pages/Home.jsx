@@ -35,10 +35,4 @@ export default Home;
 
 
 
-    /*  {movies.map((movie) => (
-        <div key={movie.imdbID}>
-          <img className="movie__poster" src={movie.Poster} alt={movie.Title} />
-          <h2 className="movie__title">{movie.Title}</h2>
-          <p className="movie__year">{movie.Year}</p>
-        </div>
-      ))}
+    
