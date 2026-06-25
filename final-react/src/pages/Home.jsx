@@ -17,16 +17,24 @@ function Home() {
       .catch((error) => console.log(error));
   }, []);
 
-  return (
-    <div class="background">
-      <h1>The first 6 Movies of an API</h1>
-<Link to={`/movie/${movie.imdbID}`}>
-  <img className="movie__poster" src={movie.Poster} alt={movie.Title} />
-  <h2 className="movie__title">{movie.Title}</h2>
-</Link>
-   
-    </div>
-  );
+return (
+  <div className="background">
+    <h1>The first 6 Movies of an API</h1>
+
+    {movies.map((movie) => (
+      <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
+        <div className="movie">
+          <img
+            className="movie__poster"
+            src={movie.Poster}
+            alt={movie.Title}
+          />
+          <h2 className="movie__title">{movie.Title}</h2>
+        </div>
+      </Link>
+    ))}
+  </div>
+);
 }
 
 export default Home;
