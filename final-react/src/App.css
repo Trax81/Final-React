@@ -10,17 +10,29 @@
 
 
 h1 {
-  color:lightblue;
+  color:blue;
   text-align: center;
   padding:40px;
+  font-size:60px;
 }
 
 
 .background {
-  background-color: black;
+  background-color: lightgrey;
 }
 
 
 .movie__poster {
   margin-left:150px;
+}
+
+.movie__title {
+ color:blue;
+ font-size:30px;
+ text-align:center;
+}
+
+.movie__year {
+  font-size:40px;
+   text-align:center;
 }

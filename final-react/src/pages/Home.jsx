@@ -1,4 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+
+
+
 
 function Home() {
   const [movies, setMovies] = useState([]);
@@ -15,17 +20,25 @@ function Home() {
   return (
     <div class="background">
       <h1>The first 6 Movies of an API</h1>
-
-      {movies.map((movie) => (
-        <div key={movie.imdbID}>
-          <img className="movie__poster" src={movie.Poster} alt={movie.Title} />
-          <h2>{movie.Title}</h2>
-          <p>{movie.Year}</p>
-        </div>
-      ))}
+<Link to={`/movie/${movie.imdbID}`}>
+  <img className="movie__poster" src={movie.Poster} alt={movie.Title} />
+  <h2 className="movie__title">{movie.Title}</h2>
+</Link>
+   
     </div>
   );
 }
 
 export default Home;
 
+
+
+
+
+    /*  {movies.map((movie) => (
+        <div key={movie.imdbID}>
+          <img className="movie__poster" src={movie.Poster} alt={movie.Title} />
+          <h2 className="movie__title">{movie.Title}</h2>
+          <p className="movie__year">{movie.Year}</p>
+        </div>
+      ))}
