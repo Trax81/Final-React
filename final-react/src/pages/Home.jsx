@@ -3,20 +3,24 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [movies, setMovies] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("avatar");
 
-  useEffect(() => {
-    fetch("https://www.omdbapi.com/?s=avatar&apikey=11a85b25")
-      .then((res) => res.json())
-      .then((data) => {
-        setMovies(data.Search ? data.Search.slice(0, 6) : []);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+useEffect(() => {
+  fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=11a85b25`)
+    .then((res) => res.json())
+    .then((data) => {
+      setMovies(data.Search ? data.Search.slice(0, 6) : []);
+    })
+    .catch((error) => console.log(error));
+}, [searchTerm]);   
+}
+
+
 
   return (
     <div className="background">
-      <h1>The first 6 Movies of an API</h1>
-
+      <h1>Movie Info Finder</h1>
+<input type="text" placeholder="Search for a movie.." onChange={(e) => setSearchTerm(e.target.value)} />
       {movies.map((movie) => (
         <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
           <div className="movie">
