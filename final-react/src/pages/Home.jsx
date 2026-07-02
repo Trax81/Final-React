@@ -3,40 +3,38 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [movies, setMovies] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("avatar");
+  const [searchTerm, setSearchTerm] = useState("avatar");
 
-useEffect(() => {
-  fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=11a85b25`)
-    .then((res) => res.json())
-    .then((data) => {
-      setMovies(data.Search ? data.Search.slice(0, 6) : []);
-    })
-    .catch((error) => console.log(error));
-}, [searchTerm]);   
-}
-
-
+  useEffect(() => {
+    fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=11a85b25`)
+      .then((res) => res.json())
+      .then((data) => {
+        setMovies(data.Search ? data.Search.slice(0, 6) : []);
+      })
+      .catch((error) => console.log(error));
+  }, [searchTerm]);
 
   return (
     <div className="background">
       <h1>Movie Info Finder</h1>
-<input type="text" placeholder="Search for a movie.." onChange={(e) => setSearchTerm(e.target.value)} />
+
+      <input
+        type="text"
+        placeholder="Search for a movie..."
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
       {movies.map((movie) => (
-        <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
-          <div className="movie">
-            <img
-              className="movie__poster"
-              src={movie.Poster}
-              alt={movie.Title}
-            />
-            <h2 className="movie__title">{movie.Title}</h2>
-          </div>
-        </Link>
+       <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
+  <div className="movie">
+    <img src={movie.Poster} alt={movie.Title} />
+    <h2>{movie.Title}</h2>
+  </div>
+</Link>
       ))}
     </div>
   );
 }
-
 export default Home;
 
 
