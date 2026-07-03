@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
+
 function MovieInfo() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
