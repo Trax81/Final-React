@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
 function Home() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("avatar");
@@ -15,10 +16,16 @@ function Home() {
   }, [searchTerm]);
 
   return (
-    <div className="background">
-      <h1>Movie Info Finder</h1>
 
-      <input
+    
+    <div className="background">
+        <nav className="navbar">
+            <button className="About-btn">About</button>
+            <button className="Contact-btn">Contact</button>
+        </nav>
+      <h1>Movie Info Finder</h1>
+<button className="search-btn">Search</button>
+      <input className="search-input"
         type="text"
         placeholder="Search for a movie..."
         onChange={(e) => setSearchTerm(e.target.value)}

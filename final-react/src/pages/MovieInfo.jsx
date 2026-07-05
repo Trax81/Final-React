@@ -18,6 +18,7 @@ function MovieInfo() {
   }
 
   return (
+
     <div>
       <Link to="/">Back</Link>
 
