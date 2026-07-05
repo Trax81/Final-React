@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+.movie__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
 
 .todo__wrapper {
   display:flex;
@@ -15,7 +21,7 @@
   padding: 24px;
 }
 
-.navbar__button {
+.navbar-btn {
   padding: 12px 24px;
   border-radius: 8px;
   border: none;

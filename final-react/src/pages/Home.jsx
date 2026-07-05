@@ -20,8 +20,8 @@ function Home() {
     
     <div className="background">
         <nav className="navbar">
-            <button className="navbar__btn">About</button>
-            <button className="navbar__btn">Contact</button>
+            <button className="navbar-btn">About</button>
+            <button className="navbar-btn">Contact</button>
         </nav>
       <h1>Movie Info Finder</h1>
 <button className="search-btn">Search</button>
@@ -33,7 +33,7 @@ function Home() {
 
       {movies.map((movie) => (
        <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
-  <div className="movie">
+  <div className="movie__grid">
     <img src={movie.Poster} alt={movie.Title} />
     <h2>{movie.Title}</h2>
   </div>
@@ -48,4 +48,3 @@ export default Home;
 
 
 
-    
