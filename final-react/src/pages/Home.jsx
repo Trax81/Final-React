@@ -31,7 +31,7 @@ function Home() {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
 
-      <div className="movie__grid">
+<div className="movie__grid">
   {movies.map((movie) => (
     <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
       <div className="movie">
@@ -41,7 +41,9 @@ function Home() {
     </Link>
   ))}
 </div>
-
+</div>
+);
+}
 
 export default Home;
 
