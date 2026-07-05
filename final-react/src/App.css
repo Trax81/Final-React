@@ -9,8 +9,17 @@
 }
 
 .navbar {
-  margin-top:30px;
-  color:aqua;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.navbar__button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
 

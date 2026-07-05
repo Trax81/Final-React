@@ -20,8 +20,8 @@ function Home() {
     
     <div className="background">
         <nav className="navbar">
-            <button className="About-btn">About</button>
-            <button className="Contact-btn">Contact</button>
+            <button className="navbar__btn">About</button>
+            <button className="navbar__btn">Contact</button>
         </nav>
       <h1>Movie Info Finder</h1>
 <button className="search-btn">Search</button>
