@@ -31,16 +31,20 @@ function Home() {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
 
-<div className="movie__grid">
-  {movies.map((movie) => (
-    <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
-      <div className="movie">
-        <img src={movie.Poster} alt={movie.Title} />
-        <h2>{movie.Title}</h2>
+ <div className="movie__grid">
+        {movies.map((movie) => (
+          <Link
+            to={`/movie/${movie.imdbID}`}
+            key={movie.imdbID}
+            className="movie"
+          >
+            <div>
+              <img src={movie.Poster} alt={movie.Title} />
+              <h2>{movie.Title}</h2>
+            </div>
+          </Link>
+        ))}
       </div>
-    </Link>
-  ))}
-</div>
 </div>
 );
 }
