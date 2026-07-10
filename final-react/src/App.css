@@ -4,8 +4,9 @@
 
 .movie__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width:20%;
 }
 
 
@@ -51,7 +52,8 @@ h2 {
 
 
 .movie__poster {
-  margin-left:150px;
+  margin-left:30px;
+  width:20%;
 }
 
 .movie__title {
@@ -126,12 +128,22 @@ color:blue;
     }
 
     .movie__grid {
-      width:25%;
-      grid-template-columns: repeat(2, 1fr);
+      width: 20%;
+      grid-template-columns: repeat(1, 1fr);
     }
     
   }
 
   @media (max-width:480px) {
+    .search-input {
+      width: 50%;
+      
+      
+    }
+
+    .movie__grid {
+      width: 20%;
+      grid-template-columns: repeat(1, 1fr);
+    }
     
   }
