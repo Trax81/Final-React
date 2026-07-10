@@ -24,7 +24,7 @@ function Home() {
             <button className="navbar-btn">Contact</button>
         </nav>
       <h1>Movie Info Finder</h1>
-<button className="search-btn">Search</button>
+
       <input className="search-input"
         type="text"
         placeholder="Search for a movie..."
