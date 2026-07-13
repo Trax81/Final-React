@@ -1,7 +1,7 @@
 function About() {
   return (
-    <div>
-        <button></button>
+    <div className="about-page">
+        <button>Home</button>
       <h1>About Travis</h1>
       <h2>Hello, my name is Travis Jones and I am currently trying to wrap my head around React, Javascript, and routing. 
         I am training in the coding school called Frontend Simplified. The mentors are helping me understand how the code works.
