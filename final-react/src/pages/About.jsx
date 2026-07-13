@@ -1,4 +1,4 @@
-import Home from "./pages/Home.jsx";
+
 import { Link } from "react-router-dom";
 
 function About() {
