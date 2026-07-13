@@ -1,7 +1,12 @@
+import Home from "./pages/Home.jsx";
+import { Link } from "react-router-dom";
+
 function About() {
   return (
     <div className="about-page">
-        <button>Home</button>
+        <Link to="/" className="navbar-btn">
+  Home
+</Link>
       <h1>About Travis</h1>
       <h2>Hello, my name is Travis Jones and I am currently trying to wrap my head around React, Javascript, and routing. 
         I am training in the coding school called Frontend Simplified. The mentors are helping me understand how the code works.
