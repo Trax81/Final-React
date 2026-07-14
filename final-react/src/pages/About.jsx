@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <div className="about-page">
-        <Link to="/" className="navbar-btn">
+        <Link to="/" className="about-home-btn">
   Home
 </Link>
       <h1>About Travis</h1>

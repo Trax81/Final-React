@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Contact() {
     return (
            <div className="about-page">
-        <Link to="/" className="navbar-btn">
+        <Link to="/" className="contact-home-btn">
   Home
 </Link>
       <h1>

@@ -93,6 +93,32 @@ justify-content: center;
 
 }
 
+.contact-home-btn {
+  display:flex;
+  background-color: aqua;
+  border-radius: 20px;
+padding:12px;
+color:navy;
+margin: 20px auto;
+width:20%;
+text-decoration:none;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+justify-content: center;
+}
+
+.about-home-btn {
+  display:flex;
+  background-color: aqua;
+  border-radius: 20px;
+padding:12px;
+color:navy;
+margin: 20px auto;
+width:20%;
+text-decoration:none;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+justify-content: center;
+}
+
 
 
 .search-input {
