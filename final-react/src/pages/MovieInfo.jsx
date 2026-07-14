@@ -19,16 +19,16 @@ function MovieInfo() {
 
   return (
 
-    <div>
-      <Link to="/">Back</Link>
+    <div className="movie-info">
+      <Link class="back-btn" to="/">Back</Link>
 
       <h1>{movie.Title}</h1>
       <img src={movie.Poster} alt={movie.Title} />
-      <p>{movie.Plot}</p>
-      <p>{movie.Year}</p>
-      <p>{movie.Genre}</p>
-      <p>{movie.Runtime}</p>
-      <p>{movie.imdbRating}</p>
+      <h2>{movie.Plot}</h2>
+      <h2>{movie.Year}</h2>
+      <h2>{movie.Genre}</h2>
+      <h3>{movie.Runtime}</h3>
+      <h3>{movie.imdbRating}</h3>
     </div>
   );
 }

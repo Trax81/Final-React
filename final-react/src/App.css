@@ -154,6 +154,23 @@ justify-content: center;
 }
 
 
+.movie-info {
+  min-height: 100vh;
+  background-color: black;
+}
+
+.back-btn {
+   width:50%;
+    font-size:20px;
+    border-radius:30px;
+    margin-bottom:50px;
+    background-color: aqua;
+    text-decoration:none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+}
+
+
   @media (max-width:1200px) {
   .movie__grid {
     grid-template-columns: repeat(3, 1fr);
