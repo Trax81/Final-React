@@ -30,6 +30,9 @@ function Home() {
   </Link>
 </nav>
         </nav>
+
+
+        <img src="./assets/vhspile.jpg"></img>
       <h1>Movie Info Finder</h1>
 
       <input className="search-input"
