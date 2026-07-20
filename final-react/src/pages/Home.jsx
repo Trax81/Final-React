@@ -3,18 +3,29 @@ import { Link } from "react-router-dom";
 import vhspile from "../assets/vhspile.jpg";
 
 
+
+
+
+
+
 function Home() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("avatar");
+
 
   useEffect(() => {
     fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=11a85b25`)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.Search ? data.Search.slice(0, 6) : []);
+
       })
       .catch((error) => console.log(error));
   }, [searchTerm]);
+
+    const sortedMovies = [...movies].sort(
+  (a, b) => parseInt(a.Year) - parseInt(b.Year)
+);
 
   return (
 
@@ -42,7 +53,7 @@ function Home() {
       />
 
  <div className="movie__grid">
-        {movies.map((movie) => (
+        {sortedMovies.map((movie) => (
           <Link
             to={`/movie/${movie.imdbID}`}
             key={movie.imdbID}
