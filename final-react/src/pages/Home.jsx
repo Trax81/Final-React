@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import vhspile from "../assets/vhspile.jpg";
 
 
 function Home() {
@@ -30,9 +31,8 @@ function Home() {
   </Link>
 </nav>
         </nav>
+<header><img src={vhspile} alt="VHS pile" /></header>
 
-
-        <img src="./assets/vhspile.jpg"></img>
       <h1>Movie Info Finder</h1>
 
       <input className="search-input"

@@ -20,7 +20,7 @@ function MovieInfo() {
   return (
 
     <div className="movie-info">
-      <Link class="back-btn" to="/">Back</Link>
+      <Link className="back-btn" to="/">Back</Link>
 
       <h1>{movie.Title}</h1>
       <img src={movie.Poster} alt={movie.Title} />
